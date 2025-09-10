@@ -3,20 +3,23 @@ import Cars from './Cars';
 
 class Mycars extends Component {
   state = {
-    // voitures: [
-    //   {marques: 'Peugeot', color: 'Bleu'},
-    //   {marques: 'Renault', color: 'Rouge'},
-    //   {marques: 'Citroen', color: 'Vert'}
-    // ]
+    voitures: [
+      {marque: 'Peugeot', color: 'Bleu'},
+      {marque: 'Renault', color: 'Rouge'},
+      {marque: 'Citroen', color: 'Vert'}
+    ]
   }
 
   render() {
     return (
       <div>
 
-        <Cars color="bleu">Peugeot</Cars>
-        <Cars color="rouge">Renault</Cars>
-        <Cars color="vert">Citroen</Cars>
+        {this.state.voitures.map((voiture, index) => (
+          <Cars key={index} 
+          color={voiture.color} 
+          marque={voiture.marque} 
+          />
+        ))}
 
       </div>
     )
