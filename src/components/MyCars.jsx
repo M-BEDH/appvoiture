@@ -4,9 +4,9 @@ import Cars from './Cars';
 class Mycars extends Component {
   state = {
     voitures: [
-      {marque: 'Peugeot', color: 'Bleu'},
-      {marque: 'Renault', color: 'Rouge'},
-      {marque: 'Citroen', color: 'Vert'}
+      { marque: 'Peugeot', color: 'Bleu', year: 2010 },
+      { marque: 'Renault', color: 'Rouge', year: 2015 },
+      { marque: 'Citroen', color: 'Vert', year: 2018 }
     ]
   }
 
@@ -15,13 +15,17 @@ class Mycars extends Component {
       <div>
 
         {this.state.voitures.map((voiture, index) => (
-          <Cars key={index} 
-          color={voiture.color} 
-          marque={voiture.marque} 
+          <Cars key={index}
+            color={voiture.color}
+            marque={voiture.marque}
+            year={voiture.year}
           />
         ))}
 
       </div>
+
+
+
     )
   }
 
