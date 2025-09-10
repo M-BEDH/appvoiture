@@ -1,14 +1,22 @@
 import { Component } from 'react';
+import Cars from './Cars';
 
 class Mycars extends Component {
-  state = {}
+  state = {
+    // voitures: [
+    //   {marques: 'Peugeot', color: 'Bleu'},
+    //   {marques: 'Renault', color: 'Rouge'},
+    //   {marques: 'Citroen', color: 'Vert'}
+    // ]
+  }
 
   render() {
     return (
       <div>
 
-      <h1>Page</h1>
-      <p>test</p>
+        <Cars color="bleu">Peugeot</Cars>
+        <Cars color="rouge">Renault</Cars>
+        <Cars color="vert">Citroen</Cars>
 
       </div>
     )
