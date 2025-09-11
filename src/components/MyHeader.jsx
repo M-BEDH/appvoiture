@@ -1,14 +1,33 @@
+// import { Component } from "react";  ----> NE PAS OUBLIER SI COMPOSANT SINON VA NE FONCTIONNERA PAS 
+// class MyHeader extends Component {
+//   state = {
+//     title: "Liste de des voitures",
+//     subTitle: "Mes voitures préférées :",
+//     color: "#4bbfecff",
+//   };
+
+//   render() {
+//     return (
+//       <div>
+//         <h1 style={{ color: this.state.color }}>{this.state.title}</h1>
+//         <h2>{this.state.subTitle}</h2>
+//       </div>
+//     );
+//   }
+// }
+
+// export default MyHeader;
 
 
-export default function MyHeader() {
- 
-  const title = 'Liste de voitures';
-  const sub_title = 'Mes voitures préférées :';
-  
+function MyHeader() {
+  const title = "Liste de des voitures";
+  const subTitle = "Mes voitures préférées :";
+  const color = "#4bbfecff";
   return (
-    <header style={{ marginBottom: '2rem' }}>
-      <h1 style={{ margin: 0, color: '#4bbfecff' }}>{title}</h1>
-      <h2 style={{ margin: 0, color: '#fff' }}>{sub_title}</h2>
-    </header>
+    <div>
+      <h1 style={{ color }}>{title}</h1>
+      <h2>{subTitle}</h2>
+    </div>
   );
 }
+export default MyHeader;
