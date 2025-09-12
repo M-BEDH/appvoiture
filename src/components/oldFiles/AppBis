@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import Mycars from './components/oldFiles/MyCarsBis';
 import MyHeader from '../MyHeader';
 import './App.css';
 

@@ -20,7 +20,7 @@
 
 
 function MyHeader() {
-  const title = "Liste de des voitures";
+  const title = "Catalogue de voitures";
   const subTitle = "Mes voitures préférées :";
   const color = "#4bbfecff";
   return (

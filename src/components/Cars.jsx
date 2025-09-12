@@ -1,17 +1,22 @@
-const Car = ({color, children}) => {
+import Wrapper from "./Wrapper";
+
+const Car = ({ color, children, year, age }) => {
 
     const colorInfo = color ? <p>Couleur: {color}</p> : <p>Couleur: "Néant"</p>;
 
     if (children) {
         return (
-            <div style={ {backgroundColor: 'pink', width: '400px', padding: '10px', margin: '5px auto'} }>
-                <p>Marque: { children }</p>
+
+            <Wrapper>
+                <p>Marque : {children}</p>
                 {colorInfo}
-            </div>
+                <p>Année : {year}</p>
+                <p>Âge : {age} </p>
+            </Wrapper>
+
         )
     }
 
-    // return null // ce return est Facultatif
 }
 
 export default Car
