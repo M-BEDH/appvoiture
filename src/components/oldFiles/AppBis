@@ -1,6 +1,6 @@
 import { Component } from 'react';
-import Mycars from './components/MyCars';
-import MyHeader from './components/MyHeader';
+import Mycars from './components/oldFiles/MyCarsBis';
+import MyHeader from '../MyHeader';
 import './App.css';
 
 class App extends Component {
@@ -9,7 +9,7 @@ class App extends Component {
     return (
        <div>
 
-        <MyHeader />
+       
 
         <Mycars />
 
