@@ -1,4 +1,4 @@
-import { Component } from "react";
+import { Children, Component } from "react";
 import Car from "./Cars";
 import MyHeader from "./MyHeader";
 
@@ -6,19 +6,19 @@ class Mycars extends Component {
     state = {
         voitures: [
             {
-                name: "Ford",
+                marque: " Renault",
                 color: "red",
                 year: "2000",
             },
 
             {
-                name: "Mercedes",
+                marque: "Mercedes",
                 color: "black",
                 year: "2010",
             },
 
             {
-                name: "Peugeot",
+                marque: "Peugeot",
                 color: "blue",
                 year: "2025",
             },
@@ -34,35 +34,45 @@ class Mycars extends Component {
         this.setState({
             updatedState
         })
-    
-       
+
+
+    }
+     getAge = year => {
+        const now = new Date().getFullYear();
+        const age = now - year;
+        let frenchYearsStr = "" 
+        if (age > 1) {
+            frenchYearsStr = "ans";
+        } else {
+            frenchYearsStr = "an";
+        }
+        return `${age} ${frenchYearsStr}`;
     }
 
+
     render() {
-           const year = new Date().getFullYear();
+
+       
+        }
         return (
             <div>
-
-                {/* <h1 style={this.props.style}>{this.props.title}</h1> */}
-
                 <MyHeader />
 
                 <button onClick={this.addTenyears}> + 10ans </button>
 
-                <Car year = {this.state.voitures[0].year}
-                age = {year - this.state.voitures[0].year + 'ans'} color={this.state.voitures[0].color}>
-                    {this.state.voitures[0].name}
-                </Car>
+                {this.state.voitures.map(({ marque, color, year }, index) => {
+                    return (
+                        <div key={index}>
+                            <Car
+                                marque={marque}
+                                color={color}
+                                year={year}
+                                age={this.getAge()}
+                            />
 
-                <Car 
-                age = {year - this.state.voitures[1].year + 'ans'} color={this.state.voitures[1].color}>
-                    {this.state.voitures[1].name}
-                </Car>
-
-                <Car 
-                age = {year - this.state.voitures[2].year + 'ans'} color={this.state.voitures[2].color}>
-                    {this.state.voitures[2].name}
-                </Car>
+                        </div>
+                    )
+                })}
 
             </div>
         );
