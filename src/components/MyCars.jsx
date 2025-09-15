@@ -37,23 +37,17 @@ class Mycars extends Component {
 
 
     }
+    
      getAge = year => {
         const now = new Date().getFullYear();
         const age = now - year;
-        let frenchYearsStr = "" 
-        if (age > 1) {
-            frenchYearsStr = "ans";
-        } else {
-            frenchYearsStr = "an";
-        }
+        let frenchYearsStr = age > 1 ? "ans" : "an";
         return `${age} ${frenchYearsStr}`;
     }
 
 
     render() {
 
-       
-        }
         return (
             <div>
                 <MyHeader />
@@ -67,7 +61,7 @@ class Mycars extends Component {
                                 marque={marque}
                                 color={color}
                                 year={year}
-                                age={this.getAge()}
+                                age={this.getAge(year)}
                             />
 
                         </div>
