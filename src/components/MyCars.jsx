@@ -1,4 +1,4 @@
-import { Children, Component } from "react";
+import { Component } from "react";
 import Car from "./Cars";
 import MyHeader from "./MyHeader";
 
@@ -37,14 +37,13 @@ class Mycars extends Component {
 
 
     }
-    
+
      getAge = year => {
         const now = new Date().getFullYear();
         const age = now - year;
         let frenchYearsStr = age > 1 ? "ans" : "an";
         return `${age} ${frenchYearsStr}`;
     }
-
 
     render() {
 
