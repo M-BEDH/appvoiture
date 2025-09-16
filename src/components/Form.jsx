@@ -8,7 +8,11 @@ class Form extends Component {
             <div>
             <Image />
             <h1>Commentaire</h1>
-            Formulaire
+            
+            <form>
+                <label style={{margin:"5px"}}>Pseudo</label>
+                <input type="text" value=""></input>
+            </form>
             </div>
         )
     }
