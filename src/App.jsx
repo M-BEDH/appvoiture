@@ -15,7 +15,7 @@ class App extends Component {
       <Mycars />
       <Welcome />
       {/* <Image /> */}
-      {/* <Form /> */}
+       <Form /> 
       <Maman />
 
       </div>
