@@ -3,7 +3,8 @@ import Mycars from './components/Mycars';
 import './App.css';
 import Welcome from './components/Welcome';
 import Maman from './components/Maman';
-import Toto from './components/Toto'
+import Image from './components/Image';
+import Form from './components/Form';
 
 class App extends Component {
 
@@ -13,6 +14,8 @@ class App extends Component {
 
       <Mycars />
       <Welcome />
+      {/* <Image /> */}
+      {/* <Form /> */}
       <Maman />
 
       </div>
