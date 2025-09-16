@@ -1,23 +1,20 @@
-import { Component } from "react";
-
-
 const Toto = props => {
-    props.letSate.messageMaman !== null ? (<button>Réponse</button>) : (<button disabled>Réponse</button>)
+  // console.log(props)
+  return (
+    <div>
+        <h2>{props.name}</h2>
+        <button  style={{color: props.color}}
 
-    const btnReponseToto = props.letSate.messageMaman
-    
-    return (
-        <div>
-            <h2>{props.name}</h2>
-            {btnReponseToto}
+            // Compléter cette section
+             onClick={() => props.reponseToto("Bien sûr Maman chérie")}
+             disabled= {props.leState.disabled}
             
-            <p>{props.letSate.messageToto}</p>
+        >Réponse</button>
 
-             <button onClick={this.reponseToto}>Réponse Toto</button>
-        </div>    
-    )
+        <p>{props.leState.messageToto}</p>
 
+    </div>
+  )
 }
-
 
 export default Toto;
