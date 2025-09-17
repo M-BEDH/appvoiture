@@ -42,7 +42,7 @@ class Form extends Component {
         <div>
             <Image color={this.state.color} height="150" />
             <div>
-            <label style={titreRouge}>Commentaire</label>
+            <h1 style={titreRouge}>Commentaire</h1>
             <textarea value={this.state.comment} onChange={this.handleComment}></textarea>
         </div>
 
