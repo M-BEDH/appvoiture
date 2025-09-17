@@ -1,6 +1,12 @@
 import { Component } from "react"
 import Image from "./Image"
+import '../Css/style.css'
 
+
+   const titreRouge = { 
+            color: 'red',
+            fontSize: '40px',
+        }
 
 class Form extends Component {
     state = {
@@ -27,17 +33,32 @@ class Form extends Component {
     }
 
     render() {
+            // Permet d'ajouter une classe conditionnelle en fonction d'une props 
+            // ici si head est true alors la classe sera blue sinon elle sera red
+            // pour le p avec la classe myClass
+        const myClass = this.props.head ? 'blue' : 'red';
+
         return (
         <div>
             <Image color={this.state.color} height="150" />
             <div>
-            <label>Commentaire</label>
+            <label style={titreRouge}>Commentaire</label>
             <textarea value={this.state.comment} onChange={this.handleComment}></textarea>
+        </div>
+
+        <div> 
+            {/* Exemple d'utilisation de class conditionnelle */}
+            <p className={myClass}>Je suis rouge ou bleu</p>
+
+         {/* myClass entre accolades pour dire que c'est du JS (c'est une constante)
+            bigFont est une classe CSS donc pas d'accolades
+            */}
+            <p className={`${myClass} bigFont`}>Je suis rouge ou bleu</p>
         </div>
 
             <form onSubmit={this.handelSubmitForm}>
                 <div>
-                <label style={{margin:"5px"}}>  Pseudo</label>
+                <label>  Pseudo</label>
                 <input type="text" value={this.state.username} onChange={this.handelPseudo}></input>
                 </div>
             </form>
