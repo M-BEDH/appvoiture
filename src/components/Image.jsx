@@ -4,7 +4,7 @@ const Image = (props) => {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 512 512"
       width="150"
-      height="150"
+      height={props.height}
     >
       <path
         fill={props.color}

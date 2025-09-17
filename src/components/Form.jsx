@@ -29,7 +29,7 @@ class Form extends Component {
     render() {
         return (
         <div>
-            <Image color={this.state.color} />
+            <Image color={this.state.color} height="150" />
             <div>
             <label>Commentaire</label>
             <textarea value={this.state.comment} onChange={this.handleComment}></textarea>
