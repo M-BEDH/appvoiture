@@ -93,8 +93,8 @@ class Form extends Component {
 
             
             <div>
-                <h1 className="text-warning fw-bold">Test des classes bootstrap</h1>
-                <button className="btn btn-outline-primary">Valider</button>
+                <h1>Test des classes bootstrap</h1>
+                <button>Valider</button>
             </div>
 
         <div>
