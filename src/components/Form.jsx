@@ -4,6 +4,23 @@ import "../Css/style.css";
 import styles from "../Css/myCss.module.css";
 import MyHeaderOne from "./MyHeaderOne";
 
+import styled from "styled-components";
+
+const Title = styled.h1`
+  font-size: 50px;
+  color: purple;
+`;
+const Button = styled.button`
+  background-color: #4312f3;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  outline-style: solid;
+  outline-width: 2px;
+  outline-color: #12f325;
+  outline-offset: 4px;
+`;
+
 const titreRouge = {
   color: "red",
   fontSize: "40px",
@@ -55,6 +72,23 @@ class Form extends Component {
     return (
       <div>
         <Image color={this.state.color} height="150" />
+        
+        <div>
+          <label>Couleur</label>
+          <select value={this.state.color} onChange={this.handleColor}>
+            <option value="">Choisir une couleur</option>
+
+            {this.state.colors.map((color, index) => {
+              return (
+                <option key={index} value={color}>
+                  {color}
+                </option>
+              );
+            })}
+          </select>
+        </div>
+
+
         {/* <div>
           <h1 style={titreRouge}>Commentaire</h1>
           <textarea
@@ -63,7 +97,6 @@ class Form extends Component {
           ></textarea>
         </div> */}
         <div>
-
           {/* Exemple d'utilisation de class conditionnelle */}
           <p className={myClass}>Je suis rouge ou bleu</p>
 
@@ -84,33 +117,18 @@ class Form extends Component {
           </div>
         </form>
 
-
-
         <h1 className={styles.green}></h1>
         <MyHeaderOne />
         <h1 className={styles.green}>Mon titre vert</h1>
 
 
-            
-            <div>
-                <h1>Test des classes bootstrap</h1>
-                <button>Valider</button>
-            </div>
-
+        {/* Exemple avec styled component */}
         <div>
-          <label>Couleur</label>
-          <select value={this.state.color} onChange={this.handleColor}>
-            <option value="">Choisir une couleur</option>
-
-            {this.state.colors.map((color, index) => {
-              return (
-                <option key={index} value={color}>
-                  {color}
-                </option>
-              );
-            })}
-          </select>
+          <Title>Test styles components</Title>
+          <Button>Valider</Button>
         </div>
+
+
       </div>
     );
   }
